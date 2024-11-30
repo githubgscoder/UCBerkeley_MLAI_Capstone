@@ -9,10 +9,12 @@ This project aims to predict staffing needs for a healthcare organization based 
 
 #### Rationale
 Why should anyone care about this question?
+
 Labor cost is a significant expense for healthcare organizations. Accurate staffing levels can help reduce labor costs, improve patient satisfaction, and enhance the overall quality of care. Predicting staffing needs based on predicted census data can help healthcare organizations optimize their staffing levels, reduce overtime, and ensure patients receive the care they need.
 
 #### Research Question
 What are you trying to answer?
+
 This project aims to answer the following research question:
 1. Can we develop a reliable time series forecasting model to predict patient census?
 2. Can we use the predicted census data to accurately forecast staffing needs?
@@ -26,11 +28,12 @@ The following data sources will be used:
 2. External data source - CalHHS | Percentage of Influenza Detections at Clinical Labs - [Link](https://data.chhs.ca.gov/dataset/respiratory-virus-weekly-report/resource/877467c6-ace4-4ccd-9d83-079c8c968d5a)
 
 #### Outline of project
-
-- [[Link to notebook 1]()](https://github.com/githubgscoder/UCBerkeley_MLAI_Capstone/blob/5dcab1897fac145b3d39992832bae7181a76b744/Capstone_GS.ipynb)
+- Jupyter Notebook[Link](https://github.com/githubgscoder/UCBerkeley_MLAI_Capstone/blob/5dcab1897fac145b3d39992832bae7181a76b744/Capstone_GS.ipynb)
 
 #### Methodology
+
 What methods are you using to answer the question?
+
 The following methods will be used:
 1. Data Preprocessing: Cleaning and transforming the data to prepare it for modeling.
 2. Time Series Decomposition: Decomposing the time series data into trend, seasonality, and residual components.
@@ -49,8 +52,9 @@ What did your research find?
 - While we applied 3 additional features, weekday, month and flu percentage to the dataset and scaled them, the only additional feature that helped reduce the RMSE and MAE was the flu percentage.
       ![image](https://github.com/user-attachments/assets/4cd2701b-cc02-4253-aaa5-35545985f863)
 
-- The best model was a SARIMAX model with an order of (1,1,1) and seasonal order of (0,0,0,0) with a period of 110 and seasonal period of 5. 
-      ![image](https://github.com/user-attachments/assets/39ba138a-628b-47d0-859b-600b2dcc7c70)
+- The best model was a SARIMAX model with an order of (1,1,1) and seasonal order of (0,0,0,0) with a period of 110 and seasonal period of 5.
+
+  ![image](https://github.com/user-attachments/assets/39ba138a-628b-47d0-859b-600b2dcc7c70)
 
 - While Auto-ARIMA(AA) had the lowest RMSE and MAE, while copmaring the forecast by AA and STLForecast, it was better to use the STLForecast as there was a steady change in the census that matched more or less with the actual census
       ![image](https://github.com/user-attachments/assets/d598b592-2949-4055-8aa5-6d5880d601f7)
@@ -67,11 +71,6 @@ What suggestions do you have for next steps?
 - While this project only emphasized on looking at one department, it would be good to see the predictions of the other departments.
 - Incorporate more features like hospitalization if data exists
 - As there are many variables that could be considered for patients to be admitted, it would be good to test out to see if there is lag in how the admission increase based on weekly flu percentage. Do we see admission increase a week after flu trends upwards, etc.?
-
-#### Outline of project
-
-- [[Link to notebook 1]()](https://github.com/githubgscoder/UCBerkeley_MLAI_Capstone/blob/5dcab1897fac145b3d39992832bae7181a76b744/Capstone_GS.ipynb)
-
 
 ##### Contact and Further Information
 
