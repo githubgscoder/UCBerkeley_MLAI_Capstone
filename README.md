@@ -71,6 +71,7 @@ What suggestions do you have for next steps?
 - While this project only emphasized on looking at one department, it would be good to see the predictions of the other departments.
 - Incorporate more features like hospitalization if data exists
 - As there are many variables that could be considered for patients to be admitted, it would be good to test out to see if there is lag in how the admission increase based on weekly flu percentage. Do we see admission increase a week after flu trends upwards, etc.?
+- Try out other models like LinearRegression().
 
 ##### Contact and Further Information
 
