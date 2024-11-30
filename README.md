@@ -22,8 +22,12 @@ This project aims to answer the following research question:
 #### Data Sources
 What data will you use to answer you question?
 The following data sources will be used:
-1. Historical patient census data (daily counts of patients in the hospital), internal from the hospital's electronic health record system. 
+1. Historical patient census data (daily counts of patients in the hospital), internal from the hospital's electronic health record system - [Link](https://github.com/githubgscoder/UCBerkeley_MLAI_Capstone/blob/1eb7a5e079662d5f0cdf0a1334c444457b9d3c4d/data/census.xlsx)
 2. External data source - CalHHS | Percentage of Influenza Detections at Clinical Labs - [Link](https://data.chhs.ca.gov/dataset/respiratory-virus-weekly-report/resource/877467c6-ace4-4ccd-9d83-079c8c968d5a)
+
+#### Outline of project
+
+- [[Link to notebook 1]()](https://github.com/githubgscoder/UCBerkeley_MLAI_Capstone/blob/5dcab1897fac145b3d39992832bae7181a76b744/Capstone_GS.ipynb)
 
 #### Methodology
 What methods are you using to answer the question?
