@@ -98,9 +98,7 @@ The following methods will be used:
 
 
 
-### Further Information
-
-Visualizations:
+### Visualizations:
 
 - Census vs Percentage of positive FLu cases tested
   ![image](https://github.com/user-attachments/assets/be1677c0-c3ba-4977-971f-3e6778d19dae)
@@ -143,6 +141,9 @@ Visualizations:
   ![image](https://github.com/user-attachments/assets/a17b199c-5313-44dd-ad2a-2cfae46cdcf9)
 
 
+
+### Contact Information
+   LinkedIn: https://www.linkedin.com/in/gigosamuel
 
 
 
