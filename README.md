@@ -5,8 +5,6 @@
 This project aims to predict staffing needs for a healthcare organization based on predicted census using time series forecasting. The goal is to develop a time series forecasting model using ARIMA or SARIMAX to accurately predict patient census and optimie staffing levels in a healthcare setting. In addition, Recurrent Neural Networks(RNN) using Long Short-Term Memory(LSTM) and XGBoosting, an ensemble learning technique, a very powerful and popular machine learning alogorithm was also used to predict the same. The project emphasizes on data preprocessing, feature engineering, taking into account time based features, lagged variables and external factors. By comparing their performance, the most suitable approach can be identified. The goal being to establish a dependent system that translates census into optimized staffing levels, leading to efficient resource alloation and enhanced patient care.
 
 #### Rationale
-Why should anyone care about this question?
-
 Labor cost is a significant expense for healthcare organizations. Accurate staffing levels can help reduce labor costs, improve patient satisfaction, and enhance the overall quality of care. Predicting staffing needs based on predicted census data can help healthcare organizations optimize their staffing levels, reduce overtime, and ensure patients receive the care they need.
 
 #### Research Question
@@ -17,7 +15,6 @@ This project aims to answer the following research question:
 
 
 #### Data Sources
-What data will you use to answer you question?
 The following data sources will be used:
 1. Historical patient census data (daily counts of patients in the hospital), internal from the hospital's electronic health record system - [Link](https://github.com/githubgscoder/UCBerkeley_MLAI_Capstone/blob/1eb7a5e079662d5f0cdf0a1334c444457b9d3c4d/data/census.xlsx)
 2. External data source - CalHHS | Percentage of Influenza Detections at Clinical Labs - [Link](https://data.chhs.ca.gov/dataset/respiratory-virus-weekly-report/resource/877467c6-ace4-4ccd-9d83-079c8c968d5a)
@@ -26,9 +23,6 @@ The following data sources will be used:
 - Jupyter Notebook[Link](https://github.com/githubgscoder/UCBerkeley_MLAI_Capstone/blob/5dcab1897fac145b3d39992832bae7181a76b744/Capstone_GS.ipynb)
 
 #### Methodology
-
-What methods are you using to answer the question?
-
 The following methods will be used:
 1. Data Preprocessing: Cleaning and transforming the data to prepare it for modeling.
    - Historical Census Data - dataset included the midnight census for any given day for a hospital across multiple departments. For this project, all the telemetry units were aggregated under "Telemetry Unit" to provide a combined census for the day.
@@ -49,7 +43,6 @@ The following methods will be used:
 
 
 #### Results
-What did your research find?
 - Was able to derieve the p,q values from the ACF, PACF plots
       ![image](https://github.com/user-attachments/assets/41c6d8e0-99ab-424a-8b0b-5cb1981e6534)
 
@@ -77,7 +70,6 @@ What did your research find?
 
 
 #### Next steps
-What suggestions do you have for next steps?
 - While this project only emphasized on looking at one department, it would be good to see the predictions of the other departments.
 - Incorporate more features like hospitalization if data exists
 - As there are many variables that could be considered for patients to be admitted, it would be good to test out to see if there is lag in how the admission increase based on weekly flu percentage. Do we see admission increase a week after flu trends upwards, etc.?
