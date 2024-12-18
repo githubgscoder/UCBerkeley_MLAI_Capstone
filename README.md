@@ -10,8 +10,6 @@ Why should anyone care about this question?
 Labor cost is a significant expense for healthcare organizations. Accurate staffing levels can help reduce labor costs, improve patient satisfaction, and enhance the overall quality of care. Predicting staffing needs based on predicted census data can help healthcare organizations optimize their staffing levels, reduce overtime, and ensure patients receive the care they need.
 
 #### Research Question
-What are you trying to answer?
-
 This project aims to answer the following research question:
 1. Can we develop a reliable time series forecasting model to predict patient census?
 2. Can we use the predicted census data to accurately forecast staffing needs?
