@@ -1,11 +1,8 @@
-### Project Title
-Predicting staffing needs based on predicted census data
-
-**Author**
-Gigo Samuel
+### Project Title: Predicting staffing needs based on predicted census data
+**Author:** Gigo Samuel
 
 #### Executive summary
-This project aims to predict staffing needs for a healthcare organization based on predicted census data. The goal is to develop a time series forecasting model using ARIMA or SARIMAX to accurately predict patient census and optimie staffing levels in a healthcare setting. 
+This project aims to predict staffing needs for a healthcare organization based on predicted census using time series forecasting. The goal is to develop a time series forecasting model using ARIMA or SARIMAX to accurately predict patient census and optimie staffing levels in a healthcare setting. In addition, Recurrent Neural Networks(RNN) using Long Short-Term Memory(LSTM) and XGBoosting, an ensemble learning technique, a very powerful and popular machine learning alogorithm was also used to predict the same. The project emphasizes on data preprocessing, feature engineering, taking into account time based features, lagged variables and external factors. By comparing their performance, the most suitable approach can be identified. The goal being to establish a dependent system that translates census into optimized staffing levels, leading to efficient resource alloation and enhanced patient care.
 
 #### Rationale
 Why should anyone care about this question?
@@ -27,7 +24,7 @@ The following data sources will be used:
 1. Historical patient census data (daily counts of patients in the hospital), internal from the hospital's electronic health record system - [Link](https://github.com/githubgscoder/UCBerkeley_MLAI_Capstone/blob/1eb7a5e079662d5f0cdf0a1334c444457b9d3c4d/data/census.xlsx)
 2. External data source - CalHHS | Percentage of Influenza Detections at Clinical Labs - [Link](https://data.chhs.ca.gov/dataset/respiratory-virus-weekly-report/resource/877467c6-ace4-4ccd-9d83-079c8c968d5a)
 
-#### Outline of project
+#### Technical Outline of the Project
 - Jupyter Notebook[Link](https://github.com/githubgscoder/UCBerkeley_MLAI_Capstone/blob/5dcab1897fac145b3d39992832bae7181a76b744/Capstone_GS.ipynb)
 
 #### Methodology
@@ -36,12 +33,21 @@ What methods are you using to answer the question?
 
 The following methods will be used:
 1. Data Preprocessing: Cleaning and transforming the data to prepare it for modeling.
-2. Time Series Decomposition: Decomposing the time series data into trend, seasonality, and residual components.
-3. Model Selection: Selecting the best ARIMA or SARIMAX model based on the Auto-Correlation and Partial Auto-Correlation (ACF and PACF) plots.
-4. Model Evaluation: Evaluating the performance of the selected model using metrics such as Mean Absolute Error and Root Mean Square Error.
-5. Model Refining: Refining the model by incorporating external factors such as influenza detections.
-6. Additonal Models: Using Auto ARIMA to provide a summary and trace the best model.
-7. Model Deployment: Deploying the final model to predict staffing needs based on predicted census data.
+   - Historical Census Data - dataset included the midnight census for any given day for a hospital across multiple departments. For this project, all the telemetry units were aggregated under "Telemetry Unit" to provide a combined census for the day.
+   - Flu Percentage - this dataset, provided by CalHHS, shows the percentage of test that were positive among the samples tested.
+   - Data is scaled to normalize the features into similar scales, to prevent features with a larger value from dominating the model.
+2. Feature Engineering: This step revolves around adding additional information that are derieved from existing ones
+      -    Weekday [ARIMA models]
+      -    Month [ARIMA models]
+      -    Weekday, cosine and sine [LSTM, XGBoost Models Only]
+      -    Month, cosine and sine [LSTM, XGBoost Models Only]
+3. Time Series Decomposition: Decomposing the time series data into trend, seasonality, and residual components.
+4. Model Selection: Selecting the best ARIMA or SARIMAX model based on the Auto-Correlation and Partial Auto-Correlation (ACF and PACF) plots.
+6. Model Evaluation: Evaluating the performance of the selected model using metrics such as Mean Absolute Error and Root Mean Square Error(RMSE).
+7. Model Refining: Refining the model by incorporating external factors such as influenza detections.
+8. Additonal Models: Using Auto ARIMA to provide a summary and trace the best model.
+9. Model Deployment: Deploying the final model to predict staffing needs based on predicted census data.
+10. RNN and ensemble techniques were also explored, repeating the steps above do review it's performance.
 
 
 #### Results
@@ -63,6 +69,12 @@ What did your research find?
 - The number of staff reuqired were calculated based on the census predicted and while we could use either AA or STLForecast, it was decided to use STLForecast and adjust for changes as needed.
       ![image](https://github.com/user-attachments/assets/38649ccd-6daf-4cfb-9190-4019b03d6c4f)
 
+- While Auto-ARIMA, ARIMAX, SARIMAX provided good results, the next three models, performed better at predicting with a very low RMSE.
+        ![image](https://github.com/user-attachments/assets/ccdb985f-36eb-45b0-a313-7020ab90effd)
+        ![image](https://github.com/user-attachments/assets/fd1ab9a2-a2fa-4101-a0ce-42c35af7b4e0)
+
+
+
 
 
 
@@ -71,9 +83,10 @@ What suggestions do you have for next steps?
 - While this project only emphasized on looking at one department, it would be good to see the predictions of the other departments.
 - Incorporate more features like hospitalization if data exists
 - As there are many variables that could be considered for patients to be admitted, it would be good to test out to see if there is lag in how the admission increase based on weekly flu percentage. Do we see admission increase a week after flu trends upwards, etc.?
-- Try out other models like LinearRegression().
 
-##### Contact and Further Information
+
+
+#####Further Information
 
 Visualizations:
 
@@ -114,6 +127,8 @@ Visualizations:
 - Actual Census vs Predicted Census using Auto-ARIMA and STLForecast with Predicted staffing for both models
   ![image](https://github.com/user-attachments/assets/fda7650d-e03a-46ba-8a01-c3727798d713)
 
+- Actual Census vs Predicted Census using LinearRegression, LSTM and XGBoost+LSTM with predicted staffing for all models
+  ![image](https://github.com/user-attachments/assets/a17b199c-5313-44dd-ad2a-2cfae46cdcf9)
 
 
 
