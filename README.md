@@ -48,6 +48,10 @@ The following methods will be used:
    
 5. Model Evaluation:
       - Evaluating the performance of the selected model using metrics such as Mean Absolute Error and/or Root Mean Square Error(RMSE).
+      - RMSE is used due to the following reasons,
+         - Interpretability in Original Units: Easier to understand the magnitude of the error.
+         - Penalizes larger errors, which helps in selecting the right model as census predictions leads to overstaffing or understaffing, which has a greater implication
+      - MAE was also used with ARIMA and SARIMAX models, as it is less sensitive to outliers, to establish a model that can be fine tuned.
         
 6. Model Refining:
       - External factors, specifically the flu percentage data, were incorporated as exogenous variables in the SARIMAX and LSTM-XGBoost models to improve forecast accuracy.
